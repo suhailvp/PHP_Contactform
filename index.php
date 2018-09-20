@@ -4,8 +4,8 @@
 if($_POST && isset($_FILES['my_file']))
 {
 
-    $from_email         = 'noreply@ansargallery.com'; //from mail, it is mandatory with some hosts
-    $recipient_email    = 'ansargalleryqatar@gmail.com'; //recipient email (most cases it is your personal email)
+    $from_email         = 'mail@mail.com'; //from mail, it is mandatory with some hosts
+    $recipient_email    = 'mail@mail.com'; //recipient email (most cases it is your personal email)
     
     //Capture POST data from HTML form and Sanitize them, 
     $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING); //sender name
@@ -91,7 +91,7 @@ if($_POST && isset($_FILES['my_file']))
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Contact</title>
+	<title>PHP Contact form - File Attachments</title>
 	<style>
 		body{
 			text-align: center;
@@ -110,6 +110,7 @@ if($_POST && isset($_FILES['my_file']))
 </head>
 <body>
 	<div>
+	<h3>PHP Contact form - File Attachments</h3>
         <form enctype="multipart/form-data" method="POST" action="">
         <input type="text" placeholder="Name" name="sender_name" required /><br>
         <input type="email" placeholder="Email" name="sender_email" required /><br>
